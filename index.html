@@ -14,7 +14,12 @@
     <main class="content">
       <section class="result">
         <div class="result__video-container">
-          <video src="" controls class="result__video" poster=""></video>
+          <video
+            src=""
+            controls
+            class="result__video"
+            poster=""
+          ></video>
         </div>
         <form class="search-form">
           <fieldset class="search-form__fieldset">
@@ -71,7 +76,7 @@
       </section>
       <section class="content__details">
         <h1 class="title">
-          <span class="content__accent">По-</span><br />смотри<br />в окно
+          <span class="content__accent">По</span><br />смотри<br />в окно
         </h1>
         <ul class="content__list">
           <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
@@ -81,6 +86,7 @@
 
     <!-- ТЕМПЛЕЙТЫ -->
 
+    <!--ниже: шаблон прелоадера - он нам нужен пока грузится контент -->
     <template class="preloader-template">
       <div class="preloader">
         <div class="preloader-chasing-squares">
@@ -92,6 +98,7 @@
       </div>
     </template>
 
+    <!--ниже: шаблон пункта списка с карточкой видео-->
     <template class="cards-list-item-template">
       <li class="content__list-item">
         <a href="#0" class="content__card-link">
@@ -105,15 +112,19 @@
         </a>
       </li>
     </template>
+
+    <!--ниже: шаблон кнопки "Показать еще", нажатие на эту кнопку подгружает дополнительные 5 карточек, если они  есть-->
     <template class="more-button-template">
       <li><button class="button more-button">Показать еще</button></li>
     </template>
 
+    <!--ниже: шаблон блока с ошибкой. В зав от типа ошибки выбираем текст ошибка и вставляем его на страницу-->
     <template class="error-template">
       <div class="error">
         <h2 class="error__title"></h2>
       </div>
     </template>
+
     <script src="./scripts/script.js"></script>
   </body>
 </html>

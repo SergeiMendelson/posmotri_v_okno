@@ -9,13 +9,13 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", Arial, Helvetica, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -35,4 +35,238 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+.result {
+  width: 711px;
+}
+
+.result__video-container {
+  position: relative;
+  margin-top: 78px;
+  margin-bottom: 14px;
+}
+
+.result__video {
+  display: block;
+  width: 100%;
+  height: 386px;
+  object-fit: cover;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-form__fieldset-title {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 6px;
+  appearance: none;
+}
+
+.search-form__textfield {
+  width: 228px;
+  border-top: 2px solid #fff;
+  border-right: none;
+  border-bottom: 2px solid #fff;
+  border-left: none;
+  padding: 3px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+  background-color: #1b1919;
+}
+
+/* не могу понять почему не сбрасывает фокус в поле ввода города  */
+
+.search-form__label:focus {
+  outline: none;
+  cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 2px solid #fff;
+}
+
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border: 1px solid white;
+  background-color: #1b1919;
+  cursor: pointer;
+}
+
+.search-form__label
+  input[type="checkbox"]:checked
+  + .search-form__pseudo-checkbox {
+  outline: 2px solid #1b1919;
+  outline-offset: -3px;
+  background-color: white;
+}
+
+.button {
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+  background-color: #1b1919;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid #fff;
+}
+
+.search-form__submit-button {
+  margin-top: 20px;
+  padding: 6px 73px;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  color: #fff;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 75px;
+  font-style: normal;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__accent::after {
+  content: "-";
+  position: relative;
+  top: -8px;
+  left: 3px;
+}
+
+.content__list {
+  position: relative;
+  height: 298px;
+  overflow: auto;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  gap: 5px;
+}
+
+.content__video-card-description-container {
+  word-wrap: break-word;
+}
+
+.content__video-card-title {
+  width: 200px;
+  margin-bottom: 6px;
+  padding-top: 6px;
+  color: #fff;
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+}
+
+.content__video-card-thumbnail {
+  width: 100%;
+  height: 103px;
+}
+
+.content__card-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__card-link_current:focus {
+  border: 3px solid #fff;
+}
+
+.more-button {
+  padding: 8px 145px;
 }
