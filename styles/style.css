@@ -269,6 +269,10 @@ ol {
   background-color: #545050;
 }
 
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
 .content__card-link_current {
   border: 1px solid #fff;
 }
