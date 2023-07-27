@@ -124,8 +124,6 @@ ol {
   background-color: #1b1919;
 }
 
-/* не могу понять почему не сбрасывает фокус в поле ввода города  */
-
 .search-form__label:focus {
   outline: none;
   cursor: pointer;
